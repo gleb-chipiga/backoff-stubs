@@ -1,7 +1,7 @@
 About
 =====
 
-This repository contains external type annotations (see `PEP 484 <https://www.python.org/dev/peps/pep-0484/>`_) for the `backoff <https://github.com/litl/backoff>`_ package.
+This repository contains external type annotations (see `PEP 484 <https://www.python.org/dev/peps/pep-0484/>`_) for the `backoff <https://github.com/litl/backoff>`_ library.
 
 Installation
 ============

@@ -1,11 +1,17 @@
+from pathlib import Path
+
 from setuptools import setup
+
+DIR = Path(__file__).parent
 
 setup(
     name='backoff-stubs',
     author='Gleb Chipiga',
     version='1.10.0.post1',
+    description='External type annotations for the backoff package',
+    long_description=(DIR / 'README.rst').read_text('utf-8').strip(),
+    long_description_content_type="text/x-rst",
     url='https://github.com/gleb-chipiga/backoff-stubs',
-    repository='https://github.com/gleb-chipiga/backoff-stubs',
     classifiers=[
         'Intended Audience :: Developers',
         'Programming Language :: Python',
