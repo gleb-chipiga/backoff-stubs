@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='backoff-stubs',
     author='Gleb Chipiga',
-    version='1.10.0',
+    version='1.10.0.post1',
     url='https://github.com/gleb-chipiga/backoff-stubs',
     repository='https://github.com/gleb-chipiga/backoff-stubs',
     classifiers=[
