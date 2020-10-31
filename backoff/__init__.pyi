@@ -1,3 +1,4 @@
+import logging
 from typing import (Any, Callable, Dict, Generator, Iterable, Optional,
                     Sequence, Tuple, Type, TypeVar, Union)
 
@@ -14,8 +15,8 @@ def on_predicate(
     on_success: Optional[_EventHandler] = ...,
     on_backoff: Optional[_EventHandler] = ...,
     on_giveup: Optional[_EventHandler] = ...,
-    logger: str = ...,
-    **wait_gen_kwargs: Dict[str, Any]
+    logger: Union[str, logging.Logger] = ...,
+    **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
 
 def on_exception(
@@ -28,8 +29,8 @@ def on_exception(
     on_success: Optional[_EventHandler] = ...,
     on_backoff: Optional[_EventHandler] = ...,
     on_giveup: Optional[_EventHandler] = ...,
-    logger: str = ...,
-    **wait_gen_kwargs: Dict[str, Any]
+    logger: Union[str, logging.Logger] = ...,
+    **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
 
 def expo(
