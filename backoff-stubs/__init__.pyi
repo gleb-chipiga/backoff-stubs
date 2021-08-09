@@ -15,7 +15,7 @@ def on_predicate(
     on_success: Optional[_EventHandler] = ...,
     on_backoff: Optional[_EventHandler] = ...,
     on_giveup: Optional[_EventHandler] = ...,
-    logger: Union[str, logging.Logger] = ...,
+    logger: Optional[Union[str, logging.Logger]] = ...,
     **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
 
@@ -29,7 +29,7 @@ def on_exception(
     on_success: Optional[_EventHandler] = ...,
     on_backoff: Optional[_EventHandler] = ...,
     on_giveup: Optional[_EventHandler] = ...,
-    logger: Union[str, logging.Logger] = ...,
+    logger: Optional[Union[str, logging.Logger]] = ...,
     **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
 
