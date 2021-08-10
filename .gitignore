@@ -1,0 +1,6 @@
+.*
+!.gitignore
+*.egg-info
+build
+dist
+.python-version
