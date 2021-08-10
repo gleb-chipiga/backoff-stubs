@@ -7,7 +7,7 @@ DIR = Path(__file__).parent
 setup(
     name='backoff-stubs',
     author='Gleb Chipiga',
-    version='1.10.0.post4',
+    version='1.10.0.post5',
     description='External type annotations for the backoff library',
     long_description=(DIR / 'README.rst').read_text('utf-8').strip(),
     long_description_content_type="text/x-rst",
