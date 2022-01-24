@@ -8,7 +8,7 @@ _EventHandler = Union[_HandlerFunction, Iterable[_HandlerFunction]]
 
 def on_predicate(
     wait_gen: Callable[..., Generator[float, None, None]],
-    predicate: Callable[[Any], bool],
+    predicate: Callable[[Any], bool] = ...,
     max_tries: Optional[int] = ...,
     max_time: Optional[int] = ...,
     jitter: Callable[[float], float] = ...,
