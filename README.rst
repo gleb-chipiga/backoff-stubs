@@ -8,6 +8,6 @@ Installation
 
 To use these stubs with mypy, you have to install the backoff-stubs package.
 
-.. code-block:: python
+.. code-block:: bash
 
   pip install backoff-stubs
