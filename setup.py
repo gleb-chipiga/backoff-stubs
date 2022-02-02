@@ -7,7 +7,7 @@ DIR = Path(__file__).parent
 setup(
     name='backoff-stubs',
     author='Gleb Chipiga',
-    version='1.11.1',
+    version='1.11.2',
     description='External type annotations for the backoff library',
     long_description=(DIR / 'README.rst').read_text('utf-8').strip(),
     long_description_content_type="text/x-rst",
@@ -16,6 +16,9 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3 :: Only',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
@@ -26,11 +29,15 @@ setup(
         'Operating System :: Microsoft :: Windows',
         'Topic :: Internet',
         'Topic :: Software Development :: Libraries',
-        'Topic :: Software Development :: Libraries :: Python Modules'
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Typing :: Typed'
     ],
     license='MIT',
     keywords=['retry', 'backoff', 'decorators', 'stubs', 'mypy'],
     packages=['backoff-stubs'],
     package_data={'backoff-stubs': ['__init__.pyi']},
-    python_requires='>=3.8'
+    python_requires='>=3.6,<4.0',
+    extras_require={
+        'dev': ['flake8', 'isort', 'mypy', 'types-setuptools', 'tox', 'twine'],
+    }
 )
