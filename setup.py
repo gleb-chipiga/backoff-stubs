@@ -16,6 +16,7 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
@@ -29,8 +30,8 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
     license='MIT',
-    keywords=['retry', 'backoff', 'decorators', 'stubs', 'mypy'],
+    keywords=['retry', 'backoff<2', 'decorators', 'stubs', 'mypy'],
     packages=['backoff-stubs'],
     package_data={'backoff-stubs': ['__init__.pyi']},
-    python_requires='>=3.8'
+    python_requires='>=3.7'
 )
