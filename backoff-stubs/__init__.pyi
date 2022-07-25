@@ -1,11 +1,21 @@
 import logging
-from typing import (Any, Callable, Dict, Generator, Iterable, Optional,
-                    Sequence, Tuple, Type, TypeVar, Union)
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    Generator,
+    Iterable,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    TypeVar,
+    Union,
+)
 
-_FuncT = TypeVar('_FuncT', bound=Callable[..., Any])
+_FuncT = TypeVar("_FuncT", bound=Callable[..., Any])
 _HandlerFunction = Callable[[Dict], None]
 _EventHandler = Union[_HandlerFunction, Iterable[_HandlerFunction]]
-
 
 def on_predicate(
     wait_gen: Callable[..., Generator[float, None, None]],
@@ -19,8 +29,6 @@ def on_predicate(
     logger: Union[str, logging.Logger, None] = ...,
     **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
-
-
 def on_exception(
     wait_gen: Callable[..., Generator[float, None, None]],
     exception: Union[Type[Exception], Tuple[Type[Exception], ...]],
@@ -34,26 +42,12 @@ def on_exception(
     logger: Union[str, logging.Logger, None] = ...,
     **wait_gen_kwargs: Any
 ) -> Callable[[_FuncT], _FuncT]: ...
-
-
 def expo(
-    base: float = ...,
-    factor: float = ...,
-    max_value: Optional[float] = ...
+    base: float = ..., factor: float = ..., max_value: Optional[float] = ...
 ) -> Generator[float, None, None]: ...
-
-
-def fibo(
-    max_value: Optional[float] = ...
-) -> Generator[float, None, None]: ...
-
-
+def fibo(max_value: Optional[float] = ...) -> Generator[float, None, None]: ...
 def constant(
     interval: Union[float, Iterable[float], Sequence[float]] = ...
 ) -> Generator[float, None, None]: ...
-
-
 def full_jitter(value: float) -> float: ...
-
-
 def random_jitter(value: float) -> float: ...
