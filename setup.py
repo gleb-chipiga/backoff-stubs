@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from setuptools import setup
+from setuptools import setup  # type: ignore
 
 DIR = Path(__file__).parent
 
