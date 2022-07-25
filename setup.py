@@ -34,4 +34,5 @@ setup(
     packages=["backoff-stubs"],
     package_data={"backoff-stubs": ["__init__.pyi"]},
     python_requires=">=3.7",
+    install_requires=["backoff>=1.11,<2"],
 )
